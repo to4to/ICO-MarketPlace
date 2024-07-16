@@ -13,7 +13,7 @@ contract ICOMarketPlace {
     //Modifiers
 
 
-    modifier supportToken() {
+    modifier supportToken(address ) {
         
     }
 
@@ -43,4 +43,24 @@ contract ICOMarketPlace {
 
 
     function multiply(uint256 x,uint256 y)internal pure returns(uint256 z){}
+
+
+
+    function buyToken(address _token,uint256 _amount)external payable supportToken(_token){}
+
+
+
+
+    function getBalance(address _token) external view returns(uint256){}
+
+
+
+
+
+    function getSupportedTokens()external view returns(address[] memory){}
+
+
+
+
+    function withdraw(address _token,uint256 _amount){}
 }
