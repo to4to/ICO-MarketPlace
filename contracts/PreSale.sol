@@ -65,5 +65,17 @@ contract ICOMarketPlace {
     function withdraw(address _token,uint256 _amount) external onlyCreator(_token) supportToken(_token){}
 
 
-    function gettokendetails
+    function gettokendetails(address _token) external view returns(TokenDetails memory){
+
+    }
+
+
+
+    function gettokenCreatedBy(address _creator) external view returns(TokenDetails[] memory){}
+
+
+
+
+
+    function getAllTokens() external view returns(TokenDetails[] memory){}
 }
